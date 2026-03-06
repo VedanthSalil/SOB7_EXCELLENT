@@ -19,38 +19,43 @@
 # Grade: F
 # Student iis failing.
 
-exam_one = int(input("Input exam grade one: "))
 
-exam_two = input("Input exam grade two: "))
+#fixing all input variables by making it a float input for proper inputs
+exam_one = float(input("Input exam grade one: "))
 
-exam_3 = str(input("Input exam grade three: "))
+exam_two = float(input("Input exam grade two: "))
 
-grades = [exam_one exam_two exam_three]
-sum = 0
-for grade in grade:
-  sum = sum + grade
+exam_three = float(input("Input exam grade three: ")) #changed 'exam_3' to 'exam_three'
+# fixed list bt adding commas to the list to separate elements
+grades = [exam_one, exam_two, exam_three]
 
-avg = sum / len(grdes)
-
+#sum cannot be a variable because it is a keyword so i replace it to 'sum_grade' everytime it shows up in the code
+sum_grade = 0
+for grade in grades:           #changed grade to 'grades' similar to our list
+  sum_grade = sum_grade + grade
+#fixed grade typo
+avg = sum_grade / len(grades)
+#fixed logic values for if statement , fixed string errors , fixed colen error
 if avg >= 90:
     letter_grade = "A"
-elif avg >= 80 and avg < 90
+elif avg >= 80 and avg <= 90:
     letter_grade = "B"
-elif avg > 69 and avg < 80:
-    letter_grade = "C'
-elif avg <= 69 and avg >= 65:
+elif avg >=70 and avg < 80:
+    letter_grade = "C"
+elif avg >= 60 and avg < 70:
     letter_grade = "D"
-elif:
+else:                            #changed elif to else
     letter_grade = "F"
 
 for grade in grades:
     print("Exam: " + str(grade))
+#taking print statements out of loop so it doesnt repeatedy print everytime it loops
+print("Average: " + str(avg))
 
-    print("Average: " + str(avg))
-
-    print("Grade: " + letter_grade)
-
-if letter-grade is "F":
-    print "Student is failing."
+print("Grade: " + letter_grade)
+#fixed if statement 
+if letter_grade == "F":    #fixed if statement , corrected variable name 
+     #fixed print statements by adding '()'
+    print ("Student is failing.")
 else:
-    print "Student is passing."
+    print ("Student is passing.")
